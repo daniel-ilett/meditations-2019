@@ -35,9 +35,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4482001607250732}
-  - component: {fileID: 114119604268581886}
   - component: {fileID: 50323922986949076}
   - component: {fileID: 60176346926748048}
+  - component: {fileID: 114119604268581886}
   m_Layer: 0
   m_Name: obj_Sheep
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772987577536850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4269250279254336}
@@ -167,8 +167,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -699215735
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f12c2a41ec31c2a40ac3b0282c777b1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

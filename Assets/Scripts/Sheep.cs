@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/*	Sheep.cs - pick random directions to move in occasionally.
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,6 +28,7 @@ public class Sheep : MonoBehaviour
 
 		float walkTime = Random.Range(0.5f, 2.0f);
 
+		// Move in the chosen direction for a random amount of time.
 		while(walkTime > 0.0f)
 		{
 			rigidbody.velocity = walkVelocity;
@@ -33,10 +36,8 @@ public class Sheep : MonoBehaviour
 			yield return null;
 		}
 
-		// Pick a random direction and a random time. Move in that direction.
-
-		rigidbody.velocity = Vector3.zero;
 		// FInally, reset the move timer.
+		rigidbody.velocity = Vector3.zero;
 		moveRoutine = StartCoroutine(Move());
 	}
 
