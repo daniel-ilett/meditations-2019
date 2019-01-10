@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
 	// Close the window.
 	private void WinGame()
 	{
+		Debug.Log("Win!");
 		Application.Quit();
 	}
 }
