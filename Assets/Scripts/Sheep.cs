@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class Sheep : MonoBehaviour
 {
 	[SerializeField]
@@ -20,11 +21,15 @@ public class Sheep : MonoBehaviour
 
 	private const float moveSpeed = 2.5f;
 
+	private Animator animator;
 	private new Rigidbody2D rigidbody;
 
 	private void Start()
 	{
+		// Cache components.
+		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody2D>();
+		
 		moveRoutine = StartCoroutine(Move());
 	}
 
@@ -37,7 +42,8 @@ public class Sheep : MonoBehaviour
 		Vector2 walkVelocity = Random.insideUnitCircle * moveSpeed;
 
 		// Set the appropriate sprite for the sheep.
-		graphic.sprite = (walkVelocity.y > 0.0f) ? upSprite : downSprite;
+		animator.SetBool("IsUp", walkVelocity.y > 0.0f);
+		animator.SetBool("IsWalk", true);
 
 		float walkTime = Random.Range(0.5f, 2.0f);
 
@@ -49,8 +55,11 @@ public class Sheep : MonoBehaviour
 			yield return null;
 		}
 
-		// FInally, reset the move timer.
+		// Stop walking.
+		animator.SetBool("IsWalk", false);
 		rigidbody.velocity = Vector3.zero;
+
+		// FInally, reset the move timer.
 		moveRoutine = StartCoroutine(Move());
 	}
 

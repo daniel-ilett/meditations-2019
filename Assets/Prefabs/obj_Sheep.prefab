@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 50323922986949076}
   - component: {fileID: 60176346926748048}
   - component: {fileID: 114119604268581886}
+  - component: {fileID: 95588591261196128}
   m_Layer: 0
   m_Name: obj_Sheep
   m_TagString: Untagged
@@ -64,7 +65,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772987577536850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -124,6 +125,24 @@ PolygonCollider2D:
       - {x: 0.21269774, y: -0.52293384}
       - {x: 0.46142355, y: -0.13799223}
       - {x: 0.46303844, y: 0.1303677}
+--- !u!95 &95588591261196128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772987577536850}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fc2922d3f02edb4d9b2e2c1d6dc933c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114119604268581886
 MonoBehaviour:
   m_ObjectHideFlags: 1
