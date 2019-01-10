@@ -28,6 +28,7 @@ public class Sheep : MonoBehaviour
 		moveRoutine = StartCoroutine(Move());
 	}
 
+	// Continuous loop that controls sheep movement.
 	private IEnumerator Move()
 	{
 		// Wait for a random amount of time before moving.
@@ -53,8 +54,21 @@ public class Sheep : MonoBehaviour
 		moveRoutine = StartCoroutine(Move());
 	}
 
-	public void EndLevel()
+	// The sheep enters the pen.
+	private void OnTriggerEnter2D(Collider2D otherCollider)
 	{
-		StopCoroutine(moveRoutine);
+		if(otherCollider.tag == "Pen")
+		{
+			GameController.instance.CaptureSheep(this);
+		}
+	}
+
+	// The sheep exits the pen.
+	private void OnTriggerExit2D(Collider2D otherCollider)
+	{
+		if (otherCollider.tag == "Pen")
+		{
+			GameController.instance.LoseSheep(this);
+		}
 	}
 }

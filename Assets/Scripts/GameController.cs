@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 	private List<Sheep> capturedSheep = new List<Sheep>();
 
 	// I know it's dirty, but this game is tiny, which makes this fine.
-	private static GameController instance;
+	public static GameController instance;
 
 	private void Awake()
 	{
