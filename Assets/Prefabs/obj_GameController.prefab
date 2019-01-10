@@ -98,3 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71755df38e92ca40a4f1a77c0bfe684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sheepList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
