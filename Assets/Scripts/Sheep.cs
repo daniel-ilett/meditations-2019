@@ -7,6 +7,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Sheep : MonoBehaviour
 {
+	[SerializeField]
+	private Sprite upSprite;
+
+	[SerializeField]
+	private Sprite downSprite;
+
+	[SerializeField]
+	private SpriteRenderer graphic;
+
 	private Coroutine moveRoutine;
 
 	private const float moveSpeed = 2.5f;
@@ -25,6 +34,9 @@ public class Sheep : MonoBehaviour
 		yield return new WaitForSeconds(Random.Range(2.0f, 7.0f));
 
 		Vector2 walkVelocity = Random.insideUnitCircle * moveSpeed;
+
+		// Set the appropriate sprite for the sheep.
+		graphic.sprite = (walkVelocity.y > 0.0f) ? upSprite : downSprite;
 
 		float walkTime = Random.Range(0.5f, 2.0f);
 
